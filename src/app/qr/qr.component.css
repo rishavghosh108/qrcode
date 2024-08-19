@@ -1,0 +1,47 @@
+/* src/app/components/upi-qr/upi-qr.component.css */
+.qrcode{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: skyblue;
+  border-radius: 7px;
+  width: 500px;
+  height: 600px;
+}
+.button{
+  display: flex;
+  justify-content: center;
+}
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+p{
+  margin-top: 3%;
+  font-size: large;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+}
+.back button{
+  background-color: #7f8c8d; /* Grey color for 'Back' button */
+}

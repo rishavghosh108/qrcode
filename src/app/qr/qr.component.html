@@ -1,0 +1,36 @@
+<div class="main" *ngIf="url==null">
+    <div class="qrcode">
+        <br>
+        <p>{{name}}</p>
+        <qrcode [qrdata]="qrData" [errorCorrectionLevel]="'M'" [width]="width" id="qrcodeCanvas"></qrcode>
+        <p>upi id: {{upi}}</p>
+        <br>
+    </div>
+
+    <div class="buttons">
+        <div class="button">
+            <button (click)="downloadQRCode()">Download QR Code</button>
+        </div>
+        <div class="back">
+            <button (click)="refreshPage()">Back</button>
+        </div>
+    </div>
+</div>
+
+<div class="main" *ngIf="url!=null">
+    <div class="qrcode">
+        <br>
+        <p>{{url}}</p>
+        <qrcode [qrdata]="url" [errorCorrectionLevel]="'M'" [width]="width" id="Otherqr"></qrcode>
+        <br>
+    </div>
+
+    <div class="buttons">
+        <div class="button">
+            <button (click)="downloadOtherQRCode()">Download QR Code</button>
+        </div>
+        <div class="back">
+            <button (click)="refreshPage()">Back</button>
+        </div>
+    </div>
+</div>

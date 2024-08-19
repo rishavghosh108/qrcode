@@ -1,0 +1,47 @@
+<div class="form-container" *ngIf="!qr_state">
+    <h1>Transaction Form</h1>
+    <form [formGroup]="Transaction" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <div class="span">
+            <span *ngIf="Transaction.get('name')?.invalid && Transaction.get('name')?.touched || name_error">
+                Please enter a valid name!
+            </span>
+        </div>
+        <input type="text" id="name" formControlName="name" [ngClass]="{'bordererrorcolor': Transaction.get('name')?.invalid && Transaction.get('name')?.touched} || name_error" (focus)="Name_err()">
+      </div>
+
+      <div class="form-group">
+        <label for="upi">VPA:</label>
+        <div class="span">
+            <span *ngIf="Transaction.get('upi')?.invalid && Transaction.get('upi')?.touched || upi_error">
+                Please enter a upi id!
+            </span>
+        </div>
+        <input type="text" id="upi" formControlName="upi" placeholder="Enter your UPI ID " 
+        [class.bordererrorcolor]="Transaction.get('upi')?.invalid && Transaction.get('upi')?.touched || upi_error">
+        </div>
+
+        <div class="form-group">
+        <label for="amount">Amount:(Optional)</label>
+        <div class="span">
+            <span *ngIf="Transaction.get('amount')?.invalid && Transaction.get('amount')?.touched || amount_error">
+                amount should be in number!
+            </span>
+        </div>
+        <input type="text" id="amount" formControlName="amount" placeholder="Enter Amount" 
+        [class.bordererrorcolor]="Transaction.get('amount')?.invalid && Transaction.get('amount')?.touched || amount_error">
+        </div>
+
+      <div class="buttons">
+        <button type="submit" >Submit</button>
+        <button  (click)="refreshPage()" class="back">back</button> 
+      </div>
+
+    </form>
+  </div>
+<div *ngIf="qr_state">
+  <app-qr [name]="nameValue" [upi]="upiValue" [amount]="amountValue"></app-qr>
+</div>
+  
