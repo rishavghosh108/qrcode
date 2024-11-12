@@ -45,13 +45,13 @@ This tool was designed with the goal of enhancing **email organization and respo
 1. Clone this repository:
 
    ```
-   git clone https://github.com/rishavghosh108/portfolio.git
+   https://github.com/rishavghosh108/qrcode.git
    ```
 
 2. Enter into repository:
 
     ```
-    cd portfolio
+    cd qrcode
     ```
 
 3. Install requirments:
