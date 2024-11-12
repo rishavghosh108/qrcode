@@ -45,7 +45,7 @@ This tool was designed with the goal of enhancing **email organization and respo
 1. Clone this repository:
 
    ```
-   https://github.com/rishavghosh108/qrcode.git
+   git clone https://github.com/rishavghosh108/qrcode.git
    ```
 
 2. Enter into repository:
